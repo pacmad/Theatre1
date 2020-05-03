@@ -1,0 +1,27 @@
+<div class="details-container">
+  <div class="img-block">
+    <img [src]="model?.image" id="image" />
+  </div>
+  <div class="info-block">
+    <div class="info-block" [hidden]="!hasAccess">
+      <button (click)="edit(model?.id)" class="btn btn-warning">Редактировать</button>
+    </div>
+    <div class="title">
+      <span class="title-info">Название: </span>
+      <span>{{model?.name}}</span>
+    </div>
+    <div class="description">
+      <span class="title-info">Описание: </span>
+      <span>{{model?.description}}</span>
+    </div>
+    <br/>
+    <div class="times" *ngFor="let item of times">
+      Дата: <span class="time">{{item.time}}</span>
+      <button class="btn btn-primary" (click)="book(model.id, item.id)">Забронировать</button>
+    </div>
+    <div class="info-block">
+      <input type="number" class="form-control" [(ngModel)]="count" />
+    </div>
+  </div>
+</div>
+

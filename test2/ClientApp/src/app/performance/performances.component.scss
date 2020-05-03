@@ -1,0 +1,15 @@
+.item-container {
+  display: flex;
+  flex: 0 0 45%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  height: 200px;
+  border: 1px solid lightgray;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.item-container:hover {
+  box-shadow: 0 0 13px rgba(0,0,0,1);
+  cursor:pointer;
+}

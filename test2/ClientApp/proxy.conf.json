@@ -1,0 +1,15 @@
+{
+  "/performance/*": {
+    "target": "http://localhost:44306",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/performance": {
+    "target": "http://localhost:44306",
+    "secure": true,
+    "pathRewrite": {
+      "^/posts": ""
+    },
+    "changeOrigin": true
+  }
+}

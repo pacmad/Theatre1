@@ -1,0 +1,13 @@
+<div class="item" [routerLink]="['/details', model.id]">
+  <div class="model-item">
+    <span>Название: </span>
+    <span class="">{{model.name}}</span>
+  </div>
+  <div class="model-item description">
+    <span>Описание: </span>
+    <span class="">{{model.description}}</span>
+  </div>
+</div>
+<div class="img">
+  <img [src]="model.image" class="model-image"/>
+</div>

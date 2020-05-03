@@ -1,0 +1,4 @@
+<h1>Афиша</h1>
+<br />
+<performances-list #list class="performance-list"></performances-list>
+<ngb-pagination [collectionSize]="list.total" [pageSize]="list.pageSize" [(page)]="list.page"></ngb-pagination>

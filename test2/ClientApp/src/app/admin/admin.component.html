@@ -1,0 +1,20 @@
+<div>
+  <span>Название: </span>&nbsp;&nbsp;&nbsp;
+  <input type="text" [(ngModel)]="model.name" class="form-control"/>
+</div>
+<div>
+  <span>Описание: </span>&nbsp;&nbsp;&nbsp;
+  <input type="text" [(ngModel)]="model.description"class="form-control" />
+</div>
+<div>
+  <span>Расположение картинки: </span>&nbsp;&nbsp;&nbsp;
+  <input type="text" [(ngModel)]="model.image" class="form-control"/>
+</div>
+
+<div *ngFor="let date of model.performanceDates" class="input-group">
+  <input type="date" value="{{date.date.toISOString().slice(0,10)}}" (change)="editDate($event.target.value, date.id)"/>
+</div>
+
+<div>
+  <input type="button" class="btn btn-success" (click)="save()" value="Сохранить" />
+</div>
